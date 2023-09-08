@@ -31,6 +31,11 @@
   background-color: brown;
 }
 
+body {
+  background-image: url('https://i.postimg.cc/FFYVryBd/photo-2023-09-08-23-32-17.jpg');
+  background-size: cover; /* Растянуть изображение на всю ширину и высоту экрана */
+  background-repeat: no-repeat;
+}
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
   .card, .hole-game {
