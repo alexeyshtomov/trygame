@@ -1,10 +1,10 @@
 .card {
-  width: 600px;
+  width: 100%; /* Изменено на 100%, чтобы адаптироваться к ширине экрана */
   margin-bottom: 0;
 }
 
 .hole-game {
-  width: 600px;
+  width: 100%; /* Изменено на 100%, чтобы адаптироваться к ширине экрана */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -13,10 +13,12 @@
 .status {
   margin-bottom: 20px;
 }
+
 .hole {
-  width: 150px;
-  height: 150px;
-  margin: 0 15px 30px;
+  width: 100%; /* Изменено на 100%, чтобы адаптироваться к ширине экрана */
+  max-width: 150px; /* Максимальная ширина для дырки */
+  height: auto; /* Автоматическая высота, чтобы сохранить соотношение сторон */
+  margin: 0 0 20px; /* Уменьшено расстояние снизу для мобильных устройств */
   background: gray;
   border-radius: 50%;
 }
@@ -27,4 +29,16 @@
   background-repeat: no-repeat;
   background-size: contain;
   background-color: brown;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 768px) {
+  .card, .hole-game {
+    width: 100%; /* Изменено на 100% для мобильных устройств */
+  }
+  
+  .hole {
+    max-width: none; /* Убрано ограничение максимальной ширины */
+    width: calc(50% - 10px); /* Две дырки в ряд на мобильных устройствах */
+  }
 }
