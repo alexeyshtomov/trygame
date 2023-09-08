@@ -31,11 +31,6 @@
   background-color: brown;
 }
 
-body {
-  background-image: url();
-  background-size: cover; /* Растянуть изображение на всю ширину и высоту экрана */
-  background-repeat: no-repeat;
-}
 /* Медиа-запрос для мобильных устройств */
 @media (max-width: 768px) {
   .card, .hole-game {
