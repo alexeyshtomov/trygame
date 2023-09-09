@@ -65,7 +65,7 @@
 }
 
 /* Медиа-запрос для мобильных устройств */
-@media (max-width: 768px) {
+@media (max-width: 450px) {
   .hole {
     width: 48%;
     padding-top 48%;
