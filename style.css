@@ -1,33 +1,35 @@
 /* Общие стили для всех экранов */
 .card {
+  max-width: 600px; /* Максимальная ширина карты */
   width: 100%;
-  margin-bottom: 20px;
+  margin: 0 auto; /* Центрирование на экране */
+  padding: 20px;
+  box-sizing: border-box; /* Учтем padding в общей ширине */
 }
 
 .hole-game {
-  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .status {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .hole {
-  width: 30%;
-  padding-top: 30%;
-  margin: 0 2% 4%;
+  width: 30%; /* Ширина лунок */
+  padding-top: 30%; /* Соотношение сторон 1:1 для кругов */
+  margin: 0 2% 4%; /* Отступы между лунками */
   background: gray;
   border-radius: 50%;
+  background-size: cover; /* Заполняем фоном всю площадь */
+  background-position: center center; /* Выравниваем фон по центру */
+  background-repeat: no-repeat; /* Отключаем повторение фона */
 }
 
 .hole_has-mole {
   background-image: url(https://i.postimg.cc/qRS3Wnk9/image.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-color: brown;
 }
 
@@ -40,29 +42,30 @@
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0,0,0,0.7);
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: 10% auto;
-  padding: 10px;
+  margin: 15% auto;
+  padding: 20px;
   border: 1px solid #888;
-  width: 90%;
+  max-width: 80%; /* Максимальная ширина модального окна */
 }
 
 .close {
-  font-size: 24px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
 }
-/* Стили для iPhone 12 */
-@media (max-width: 390px) {
-  .hole {
-    width: 40%;
-    padding-top: 40%;
-    margin: 0 5% 5%;
-  }
 
-  .modal-content {
-    margin: 20% auto;
+/* Медиа-запрос для мобильных устройств, ширина меньше 768px (стандартный порог для мобильных) */
+@media (max-width: 768px) {
+  .hole {
+    width: 48%; /* Уменьшаем ширину лунок для маленьких экранов */
+    padding-top: 48%; /* Соотношение сторон 1:1 для кругов */
+    margin: 0 2% 4%; /* Отступы между лунками */
   }
 }
