@@ -1,10 +1,10 @@
 /* Общие стили для всех экранов */
 .card {
-  max-width: 600px; /* Максимальная ширина карты */
+  max-width: 100%;
   width: 100%;
-  margin: 0 auto; /* Центрирование на экране */
-  padding: 20px;
-  box-sizing: border-box; /* Учтем padding в общей ширине */
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .hole-game {
@@ -13,19 +13,21 @@
   justify-content: space-around;
 }
 
-.status {
-  margin-bottom: 20px;
+.status, #timer {
+  text-align: center;
+  margin-bottom: 10px;
 }
 
+/* Стили для кругов */
 .hole {
-  width: 30%; /* Ширина лунок */
-  padding-top: 30%; /* Соотношение сторон 1:1 для кругов */
-  margin: 0 2% 4%; /* Отступы между лунками */
+  width: 25%;
+  padding-top: 25%;
+  margin: 0 2% 4%;
   background: gray;
   border-radius: 50%;
-  background-size: cover; /* Заполняем фоном всю площадь */
-  background-position: center center; /* Выравниваем фон по центру */
-  background-repeat: no-repeat; /* Отключаем повторение фона */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .hole_has-mole {
@@ -33,6 +35,7 @@
   background-color: brown;
 }
 
+/* Стили для модального окна */
 .modal {
   display: none;
   position: fixed;
@@ -50,7 +53,7 @@
   margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  max-width: 80%; /* Максимальная ширина модального окна */
+  max-width: 80%;
 }
 
 .close {
@@ -61,11 +64,11 @@
   cursor: pointer;
 }
 
-/* Медиа-запрос для мобильных устройств, ширина меньше 768px (стандартный порог для мобильных) */
-@media (max-width: 768px) {
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 767px) {
   .hole {
-    width: 48%; /* Уменьшаем ширину лунок для маленьких экранов */
-    padding-top: 48%; /* Соотношение сторон 1:1 для кругов */
-    margin: 0 2% 4%; /* Отступы между лунками */
+    width: 48%;
+    padding-top: 48%;
+    margin: 0 2% 4%;
   }
 }
