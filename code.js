@@ -74,7 +74,7 @@
     activeHole = Math.floor(1 + Math.random() * 9);
     activateHole(activeHole);
     next();
-  }, 800);
+  }, 500);
 
   // Добавляем обработчик события click для каждой лунки
   document.querySelectorAll(".hole").forEach(hole => hole.addEventListener("click", handleClick));
