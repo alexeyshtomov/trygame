@@ -10,7 +10,7 @@
 .hole-game {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center; /* Центрируем круги по горизонтали */
 }
 
 .status, #timer {
@@ -22,7 +22,7 @@
 .hole {
   width: 25%;
   padding-top: 25%;
-  margin: 0 2% 4%;
+  margin: 1%; /* Отступы между кругами */
   background: gray;
   border-radius: 50%;
   background-size: cover;
@@ -69,6 +69,6 @@
   .hole {
     width: 48%;
     padding-top: 48%;
-    margin: 0 2% 4%;
+    margin: 2%; /* Увеличиваем отступы между кругами для лучшей читаемости на маленьких экранах */
   }
 }
