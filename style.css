@@ -1,22 +1,24 @@
+/* Общие стили для всех экранов */
 .card {
-  width: 600px;
-  margin-bottom: 0;
+  width: 100%;
+  margin-bottom: 20px;
 }
 
 .hole-game {
-  width: 600px;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .status {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
+
 .hole {
-  width: 150px;
-  height: 150px;
-  margin: 0 15px 30px;
+  width: 30%;
+  padding-top: 30%;
+  margin: 0 2% 4%;
   background: gray;
   border-radius: 50%;
 }
@@ -43,55 +45,24 @@
 
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto;
-  padding: 20px;
+  margin: 10% auto;
+  padding: 10px;
   border: 1px solid #888;
-  width: 80%;
+  width: 90%;
 }
 
 .close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-  cursor: pointer;
+  font-size: 24px;
 }
-
-.close:hover {
-  color: black;
-}
-
-/* Стили для мобильных устройств */
-@media (max-width: 768px) {
-  .card {
-    width: 100%; /* Изменить ширину карты на 100% экрана */
-    margin-bottom: 20px; /* Увеличить отступ снизу */
-  }
-
-  .hole-game {
-    width: 100%; /* Изменить ширину игрового поля на 100% экрана */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
-
+/* Стили для iPhone 12 */
+@media (max-width: 390px) {
   .hole {
-    width: 30%; /* Изменить размер лунок на 30% экрана */
-    padding-top: 30%; /* Установить высоту лунок, чтобы они были квадратными */
-    margin: 0 2% 4%; /* Увеличить отступы между лунками */
-  }
-
-  .status {
-    margin-bottom: 10px; /* Уменьшить отступ снизу для статуса */
+    width: 40%;
+    padding-top: 40%;
+    margin: 0 5% 5%;
   }
 
   .modal-content {
-    margin: 10% auto; /* Уменьшить отступ модального окна */
-    padding: 10px; /* Уменьшить внутренний отступ модального окна */
-    width: 90%; /* Уменьшить ширину модального окна */
-  }
-
-  .close {
-    font-size: 24px; /* Уменьшить размер кнопки закрытия */
+    margin: 20% auto;
   }
 }
